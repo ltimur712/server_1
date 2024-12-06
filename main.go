@@ -28,7 +28,7 @@ func okHandler(w http.ResponseWriter, r *http.Request) {
 
 // Обработчик для страницы "Info"
 func infoHandler(w http.ResponseWriter, r *http.Request) {
-	studentInfo := "ФИО: Иванов Иван Иванович\nГруппа: 123-45"
+	studentInfo := "ФИО: Лобин Тимур Сергеевич\nГруппа: 712"
 	w.WriteHeader(http.StatusOK) 
 	w.Write([]byte(studentInfo)) 
 }
@@ -42,7 +42,7 @@ func statusHandler(w http.ResponseWriter, r *http.Request) {
 	currentTime := time.Now().Format("2006-01-02 3:4:5 pm")
 
 	// Информация для вывода
-	response := fmt.Sprintf("IP-адрес: %s\nФИО: Иванов Иван Иванович\nТекущее время: %s", ip, currentTime)
+	response := fmt.Sprintf("IP-адрес: %s\nФИО: Лобин Тимур Сергеевич\nТекущее время: %s", ip, currentTime)
 
 	w.WriteHeader(http.StatusOK)
 	w.Write([]byte(response))    
